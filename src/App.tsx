@@ -1,10 +1,14 @@
 import './App.css'
+import { MantineProvider } from '@mantine/core';
+import ValentineGreeting from './components/ValentineGreeting'
 
 function App() {
   return (
-    <div className="namaste-container">
-      <h1>Namaste 🙏</h1>
-    </div>
+    <MantineProvider>
+      <div className="app">
+        <ValentineGreeting />
+      </div>
+    </MantineProvider>
   )
 }
 

@@ -5,8 +5,10 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies, Mantine UI, and type definitions
+RUN npm install && \
+    npm install @mantine/core @mantine/hooks @emotion/react && \
+    npm install --save-dev @types/react @types/react-dom
 
 # Install vite globally
 RUN npm install -g vite
