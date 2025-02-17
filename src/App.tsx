@@ -1,12 +1,12 @@
 import './App.css'
 import { MantineProvider } from '@mantine/core';
-import ValentineGreeting from './components/ValentineGreeting'
+import ValentinesGreeting from './components/ValentinesGreeting'
 
 function App() {
   return (
     <MantineProvider>
       <div className="app">
-        <ValentineGreeting />
+        <ValentinesGreeting />
       </div>
     </MantineProvider>
   )

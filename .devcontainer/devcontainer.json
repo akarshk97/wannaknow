@@ -1,0 +1,22 @@
+{
+	"dockerComposeFile": "compose.yaml",
+	"workspaceFolder": "/app",
+	"service": "web",
+	"customizations": {
+		"vscode": {
+		  "settings": {
+			"terminal.integrated.defaultProfile.linux": "bash",
+			"editor.formatOnSave": true
+		  },
+		  "extensions": [
+			"ms-vscode.vscode-typescript-tslint-plugin",
+			"dbaeumer.vscode-eslint",
+			"eamodio.gitlens"
+		  ]
+		}
+	  },
+  "forwardPorts": [3000, 4000, 5173],
+  "postCreateCommand": "npm install || bundle install",
+
+  }
+  

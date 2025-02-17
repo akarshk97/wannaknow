@@ -1,14 +1,15 @@
 FROM node:18-alpine
 
+# Install Git
+RUN apk --no-cache add git
+
 WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies, Mantine UI, and type definitions
-RUN npm install && \
-    npm install @mantine/core @mantine/hooks @emotion/react && \
-    npm install --save-dev @types/react @types/react-dom
+# Install dependencies
+RUN npm install
 
 # Install vite globally
 RUN npm install -g vite
